@@ -2561,30 +2561,9 @@ button.proof-card__video {
     font-size: clamp(1.3rem, 5vw, 1.8rem);
   }
 
-  /* ── Steps: disable sticky scroll, use vertical layout ── */
-  .s-steps {
-    height: auto !important;
-  }
-
-  .steps__sticky {
-    position: relative;
-    height: auto;
-    overflow: visible;
-  }
-
-  .steps__header {
-    padding: 0 var(--space-sm);
-  }
-
-  .steps__track {
-    flex-direction: column;
-    gap: var(--space-sm);
-    padding: 0 var(--space-sm);
-    transform: none !important;
-  }
-
+  /* ── Steps cards (horizontal scroll) ── */
   .step-card {
-    width: 100%;
+    width: 260px;
     min-height: auto;
   }
 
