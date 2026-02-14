@@ -92,51 +92,6 @@ function initStickyCTA() {
     }
 }
 
-/* ── Scroll-linked horizontal steps ──────────────────────────── */
-function initScrollLinkedSteps() {
-    const section = document.querySelector('.s-steps');
-    const track = document.querySelector('.steps__track');
-    if (!section || !track) return;
-
-    if (prefersReducedMotion) {
-        track.style.display = 'grid';
-        track.style.gridTemplateColumns = 'repeat(auto-fit, minmax(220px, 1fr))';
-        track.style.paddingRight = 'calc((100vw - var(--container)) / 2)';
-        section.style.height = 'auto';
-        return;
-    }
-
-    let maxScroll = 0;
-    let currentX = 0;
-    let targetX = 0;
-    let rafId = null;
-
-    function measure() {
-        const vw = window.innerWidth;
-        maxScroll = track.scrollWidth - vw;
-        if (maxScroll < 0) maxScroll = 0;
-        section.style.height = (maxScroll + window.innerHeight) + 'px';
-    }
-
-    function update() {
-        const sectionTop = section.getBoundingClientRect().top;
-        const progress = Math.max(0, Math.min(1, -sectionTop / maxScroll));
-        targetX = -progress * maxScroll;
-
-        // Lerp for smoothness (0.12 = tight follow, no lag feel)
-        currentX += (targetX - currentX) * 0.12;
-
-        // Snap when close enough to avoid sub-pixel drift
-        if (Math.abs(currentX - targetX) < 0.5) currentX = targetX;
-
-        track.style.transform = `translate3d(${currentX}px, 0, 0)`;
-        rafId = requestAnimationFrame(update);
-    }
-
-    measure();
-    window.addEventListener('resize', measure);
-    rafId = requestAnimationFrame(update);
-}
 
 /* ── Video Modal ──────────────────────────────────────────────── */
 function initVideoModal() {
@@ -218,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStaggerIndices();
     initScrollReveal();
     initStickyCTA();
-    initScrollLinkedSteps();
+
     initVideoModal();
     initConfirmModal();
 });
