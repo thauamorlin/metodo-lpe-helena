@@ -120,7 +120,7 @@ ol {
   --space-section: clamp(6rem, 12vw, 10rem);
 
   --container: min(1100px, 88vw);
-  --container-narrow: min(720px, 88vw);
+  --container-narrow: min(720px, 90vw);
 
   --radius: 16px;
   --radius-lg: 24px;
@@ -2416,6 +2416,14 @@ button.proof-card__video {
   .timeline__items {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contrast__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .s-split {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2458,9 +2466,57 @@ button.proof-card__video {
     padding-inline: var(--space-sm);
   }
 
+  /* ── Navbar mobile ── */
+  .navbar__inner {
+    padding-inline: var(--space-sm);
+  }
+
+  .navbar__cta {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar__brand-text {
+    font-size: 1.2rem;
+  }
+
   /* ── Marquee ── */
   .marquee {
     padding-block: var(--space-sm);
+  }
+
+  /* ── Editorial ── */
+  .editorial__headline {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .editorial__body {
+    font-size: 0.95rem;
+  }
+
+  /* ── Immersive ── */
+  .immersive__grid {
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+  }
+
+  .immersive__title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .s-immersive::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .immersive__point p {
+    max-width: 24ch;
+  }
+
+  .immersive__close {
+    font-size: 1rem;
+    padding-inline: var(--space-sm);
   }
 
   /* ── Method pillars ── */
@@ -2479,10 +2535,20 @@ button.proof-card__video {
     gap: var(--space-sm);
   }
 
+  .feature {
+    padding: var(--space-md);
+  }
+
   /* ── Split before/after ── */
   .s-split {
     grid-template-columns: 1fr;
-    gap: var(--space-lg);
+    gap: 0;
+    min-height: auto;
+  }
+
+  .split__before,
+  .split__after {
+    padding: var(--space-lg) var(--space-md);
   }
 
   .split__before {
@@ -2490,9 +2556,35 @@ button.proof-card__video {
     align-items: flex-start;
   }
 
-  /* ── Steps cards (horizontal scroll) ── */
+  .split__before h3,
+  .split__after h3 {
+    font-size: clamp(1.3rem, 5vw, 1.8rem);
+  }
+
+  /* ── Steps: disable sticky scroll, use vertical layout ── */
+  .s-steps {
+    height: auto !important;
+  }
+
+  .steps__sticky {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .steps__header {
+    padding: 0 var(--space-sm);
+  }
+
+  .steps__track {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: 0 var(--space-sm);
+    transform: none !important;
+  }
+
   .step-card {
-    width: 260px;
+    width: 100%;
     min-height: auto;
   }
 
@@ -2505,9 +2597,31 @@ button.proof-card__video {
     font-size: 0.95rem;
   }
 
+  /* ── Highlight card ── */
+  .highlight {
+    padding: var(--space-lg) var(--space-md);
+  }
+
   /* ── About section ── */
   .about__title {
     font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .about__quote {
+    max-width: 100%;
+  }
+
+  /* ── Contrast ── */
+  .contrast__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contrast__item {
+    padding: var(--space-md);
+  }
+
+  .contrast__title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
   }
 
   /* ── Timeline ── */
@@ -2516,13 +2630,27 @@ button.proof-card__video {
     gap: var(--space-sm);
   }
 
-  /* ── Pricing ── */
-  .pricing__card {
+  .timeline__item {
+    padding: var(--space-md);
+  }
+
+  /* ── Strategic card ── */
+  .strategic {
     padding: var(--space-lg) var(--space-md);
   }
 
-  .pricing__title {
+  /* ── Pricing ── */
+  .pricing {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .pricing__name {
     font-size: 1.3rem;
+  }
+
+  .pricing__stack-item {
+    font-size: 0.8rem;
+    gap: var(--space-xs);
   }
 
   .pricing__stack-value {
@@ -2533,27 +2661,27 @@ button.proof-card__video {
     font-size: 1.6rem;
   }
 
-  /* ── Immersive gallery ── */
-  .immersive__grid {
+  .pricing__guarantee {
     flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  /* ── Contrast ── */
-  .contrast__grid {
-    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0.4rem;
   }
 
   /* ── FAQ ── */
-  .faq-item summary {
+  .faq__q {
     font-size: 0.95rem;
-    padding: var(--space-md) 0;
-    padding-right: var(--space-lg);
     min-height: 48px;
+    padding: var(--space-md);
+    gap: var(--space-sm);
   }
 
-  .faq-item p {
+  .faq__a {
     font-size: 0.9rem;
+  }
+
+  /* ── Big quote ── */
+  .bigquote {
+    font-size: clamp(1.3rem, 5vw, 2rem);
   }
 
   /* ── Final CTA ── */
@@ -2561,10 +2689,20 @@ button.proof-card__video {
     font-size: clamp(1.5rem, 6vw, 2rem);
   }
 
+  .s-final::before {
+    width: 300px;
+    height: 300px;
+  }
+
   /* ── Buttons full width ── */
   .btn--lg,
   .btn--full {
     width: 100%;
+  }
+
+  .btn--lg {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
   }
 
   /* ── Portal modal mobile ── */
@@ -2578,6 +2716,10 @@ button.proof-card__video {
 
   .portal-modal__text {
     font-size: 0.9rem;
+  }
+
+  .portal-modal__logo {
+    max-width: 100px;
   }
 
   .portal-ring--1 {
@@ -2595,6 +2737,18 @@ button.proof-card__video {
     height: 170px;
   }
 
+  /* ── Video modal ── */
+  .video-modal__content {
+    width: 95vw;
+  }
+
+  /* ── Footer ── */
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+  }
+
   /* ── Sticky CTA ── */
   .sticky-cta {
     display: block;
@@ -2602,12 +2756,13 @@ button.proof-card__video {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 99;
+    z-index: 999;
     padding: 0.65rem var(--space-sm);
-    background: rgba(250, 247, 242, 0.95);
+    padding-bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(250, 247, 242, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(100%);
     transition: transform 0.4s var(--ease);
   }
@@ -2617,11 +2772,20 @@ button.proof-card__video {
   }
 
   .footer {
-    padding-bottom: calc(var(--space-lg) + 60px);
+    padding-bottom: calc(var(--space-lg) + 70px);
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  /* ── Container full-width on small screens ── */
+  .container {
+    padding-inline: var(--space-xs);
+  }
+
   .hero {
     padding: 70px var(--space-xs) var(--space-md);
   }
@@ -2630,28 +2794,102 @@ button.proof-card__video {
     font-size: clamp(1.5rem, 8vw, 2rem);
   }
 
+  .hero__sub {
+    font-size: 0.9rem;
+  }
+
   .hero__img-frame {
     max-width: 180px;
   }
 
+  /* ── Section headings ── */
   .section-header__title {
     font-size: clamp(1.3rem, 6vw, 1.8rem);
   }
 
+  .editorial__headline {
+    font-size: clamp(1.4rem, 7vw, 1.8rem);
+  }
+
+  /* ── Big quote ── */
   .bigquote p {
-    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    font-size: clamp(1.2rem, 5vw, 1.5rem);
   }
 
+  /* ── Steps ── */
   .step-card {
-    width: 230px;
-  }
-
-  .pricing__card {
+    width: 100%;
     padding: var(--space-md);
   }
 
+  .step-card__n {
+    font-size: 2.5rem;
+  }
+
+  /* ── Pillars ── */
+  .pillar__number {
+    font-size: 2rem;
+  }
+
+  /* ── Pricing ── */
+  .pricing {
+    padding: var(--space-md);
+  }
+
+  .pricing__stack-item {
+    font-size: 0.78rem;
+  }
+
+  .pricing__badge {
+    font-size: 0.65rem;
+    padding: 0.35rem 1rem;
+  }
+
+  .pricing__guarantee {
+    font-size: 0.78rem;
+    padding: var(--space-sm);
+  }
+
+  /* ── Split ── */
+  .split__before,
+  .split__after {
+    padding: var(--space-md) var(--space-sm);
+  }
+
+  .split__before li,
+  .split__after li {
+    font-size: 0.9rem;
+  }
+
+  /* ── Contrast ── */
+  .contrast__item {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .contrast__item p {
+    font-size: 0.85rem;
+  }
+
+  /* ── Strategic ── */
+  .strategic {
+    padding: var(--space-md);
+  }
+
+  .strategic h2 {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  /* ── Portal modal ── */
   .portal-modal__title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+  }
+
+  .portal-modal__text {
+    font-size: 0.85rem;
+  }
+
+  .portal-modal__logo {
+    max-width: 80px;
   }
 
   .portal-ring--1 {
@@ -2667,5 +2905,34 @@ button.proof-card__video {
   .portal-ring--3 {
     width: 140px;
     height: 140px;
+  }
+
+  /* ── Navbar ── */
+  .navbar__cta {
+    font-size: 0.7rem;
+    padding: 0.45rem 0.85rem;
+  }
+
+  .navbar__brand-text {
+    font-size: 1.1rem;
+  }
+
+  /* ── Footer ── */
+  .footer__brand {
+    font-size: 1rem;
+  }
+
+  .footer__links a {
+    font-size: 0.75rem;
+  }
+
+  .footer__legal {
+    font-size: 0.65rem;
+  }
+
+  /* ── Sticky CTA smaller ── */
+  .sticky-cta {
+    padding: 0.5rem var(--space-xs);
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
   }
 }
