@@ -731,7 +731,7 @@ em {
   display: flex;
   gap: var(--space-md);
   padding-left: calc((100vw - var(--container)) / 2);
-  padding-right: 40vw;
+  padding-right: 10vw;
   will-change: transform;
 }
 
