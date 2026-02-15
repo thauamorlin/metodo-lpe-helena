@@ -2808,12 +2808,14 @@ button.proof-card__video {
   margin-top: var(--space-xl);
   font-size: clamp(1rem, 2.2vw, 1.15rem);
   opacity: 0.7;
+  text-align: center;
 }
 
 /* ── Collapse ──────────────────────────────────────────────── */
 .s-collapse {
   padding: var(--space-section) 0;
   background: var(--bg);
+  text-align: center;
 }
 
 .collapse__title {
@@ -3709,6 +3711,7 @@ button.proof-card__video {
   line-height: 1.8;
   color: var(--text);
   margin-bottom: var(--space-sm);
+  text-align: left;
 }
 
 .editorial__highlight {
