@@ -3685,6 +3685,51 @@ button.proof-card__video {
 }
 
 /* ══════════════════════════════════════════════════════════════
+   DARK SECTION CONTRAST SAFETY
+   Prevents dark text variables from inheriting into dark backgrounds.
+   ══════════════════════════════════════════════════════════════ */
+
+.s-immersive p,
+.s-immersive strong,
+.s-immersive em,
+.s-immersive span:not(.label):not(.label--light),
+.s-inside p,
+.s-inside strong,
+.s-inside em,
+.s-final p,
+.s-final strong,
+.s-final em,
+.pricing p,
+.pricing strong,
+.pricing em,
+.pricing span {
+  color: inherit;
+}
+
+.s-immersive strong,
+.s-inside strong,
+.s-final strong {
+  color: var(--gold-light);
+}
+
+.pricing__philosophy strong,
+.pricing__compare strong {
+  color: var(--gold-light);
+}
+
+.field__body p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.field__close {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.field__close strong {
+  color: var(--gold-light);
+}
+
+/* ══════════════════════════════════════════════════════════════
    V3: Visual Scannability Overhaul — New Components
    ══════════════════════════════════════════════════════════════ */
 
