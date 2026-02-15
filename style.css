@@ -2703,12 +2703,18 @@ button.proof-card__video {
   line-height: 1.8;
   color: var(--text);
   margin-bottom: var(--space-md);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .portal-concept__accent {
   margin-top: var(--space-lg);
   font-size: clamp(1.05rem, 2.2vw, 1.2rem);
   color: var(--heading);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ── Mini Proof ──────────────────────────────────────────────── */
@@ -2780,10 +2786,12 @@ button.proof-card__video {
 }
 
 .symptoms__list {
-  margin: var(--space-xl) 0;
+  margin: var(--space-xl) auto;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  max-width: 520px;
+  text-align: left;
 }
 
 .symptom {
@@ -2791,7 +2799,7 @@ button.proof-card__video {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 300;
   padding-left: var(--space-lg);
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85);
   position: relative;
   line-height: 1.6;
 }
@@ -3330,12 +3338,12 @@ button.proof-card__video {
 
 .final__close {
   font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  color: var(--white);
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: var(--space-xl);
 }
 
 .final__close strong {
-  color: var(--gold);
+  color: var(--gold-light);
 }
 
 /* ── Pricing Section wrapper ──────────────────────────────── */
