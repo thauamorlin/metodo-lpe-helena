@@ -2807,7 +2807,7 @@ button.proof-card__video {
 .immersive__close {
   margin-top: var(--space-xl);
   font-size: clamp(1rem, 2.2vw, 1.15rem);
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.75);
   text-align: center;
 }
 
@@ -2885,7 +2885,7 @@ button.proof-card__video {
   font-size: clamp(1rem, 2.2vw, 1.15rem);
   line-height: 1.8;
   margin-bottom: var(--space-md);
-  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .inside__body strong {
@@ -3230,7 +3230,7 @@ button.proof-card__video {
 .pricing__philosophy {
   font-size: 1rem;
   line-height: 1.6;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: var(--space-md);
 }
 
@@ -3238,7 +3238,7 @@ button.proof-card__video {
   font-family: var(--font-serif);
   font-size: 0.95rem;
   font-style: italic;
-  opacity: 0.6;
+  color: rgba(255, 255, 255, 0.65);
   margin-bottom: var(--space-xl);
 }
 
@@ -3251,7 +3251,7 @@ button.proof-card__video {
   padding-top: var(--space-lg);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.85rem;
-  opacity: 0.65;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.5;
 }
 
@@ -3646,7 +3646,7 @@ button.proof-card__video {
 .pricing__compare {
   font-size: 0.9rem;
   line-height: 1.6;
-  opacity: 0.55;
+  color: rgba(255, 255, 255, 0.75);
   margin-bottom: var(--space-xl);
   font-style: italic;
 }
@@ -3657,7 +3657,7 @@ button.proof-card__video {
 }
 
 .pricing__guarantee {
-  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .pricing__guarantee strong {
