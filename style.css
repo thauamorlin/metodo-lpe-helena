@@ -3457,3 +3457,219 @@ button.proof-card__video {
 .proof-card__video:hover {
   color: var(--gold);
 }
+
+/* ── Hero Proof Badge ──────────────────────────────────────── */
+.hero__proof {
+  display: block;
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.hero__proof strong {
+  color: var(--heading);
+}
+
+/* ── Results Grid ("O que muda na prática") ──────────────── */
+.s-results {
+  padding: var(--space-section) 0;
+  background: var(--bg);
+}
+
+.results__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 300;
+  color: var(--heading);
+  margin-bottom: var(--space-xl);
+}
+
+.results__title em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.results__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--bg-warm);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(184, 149, 106, 0.1);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.results__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 24px rgba(184, 149, 106, 0.12);
+}
+
+.results__icon {
+  color: var(--gold);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  flex-shrink: 0;
+}
+
+.results__item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.results__item strong {
+  color: var(--heading);
+}
+
+.results__note {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--muted);
+  text-align: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(184, 149, 106, 0.1);
+}
+
+.results__note strong {
+  color: var(--gold);
+}
+
+/* ── Value Stack ──────────────────────────────────────────── */
+.s-value-stack {
+  padding: var(--space-section) 0;
+  background: var(--bg-warm);
+}
+
+.value-stack__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 300;
+  color: var(--heading);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.value-stack__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.value-stack__item {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(184, 149, 106, 0.12);
+  backdrop-filter: blur(8px);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.value-stack__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(184, 149, 106, 0.15);
+}
+
+.value-stack__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto var(--space-md);
+  border-radius: 50%;
+  background: rgba(184, 149, 106, 0.1);
+  color: var(--gold);
+}
+
+.value-stack__item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--heading);
+  margin-bottom: var(--space-xs);
+}
+
+.value-stack__item p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.value-stack__note {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.7;
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(184, 149, 106, 0.1);
+}
+
+.value-stack__note strong {
+  color: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .value-stack__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .value-stack__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Pricing V2 Additions ──────────────────────────────────── */
+.pricing__daily {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin-top: var(--space-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.pricing__compare {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.55;
+  margin-bottom: var(--space-xl);
+  font-style: italic;
+}
+
+.pricing__compare strong {
+  color: var(--gold-light);
+  opacity: 1;
+}
+
+.pricing__guarantee {
+  opacity: 0.8;
+}
+
+.pricing__guarantee strong {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ── About V2 Additions ────────────────────────────────────── */
+.about__cred {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(184, 149, 106, 0.15);
+  font-style: italic;
+}
